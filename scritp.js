@@ -38,16 +38,28 @@ const perguntas = [
         alternativas: [
            "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
             "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial."
-        ]
+        ] 
     },
 ];
 
 let atual = 0;
 let perguntaAtual;
 
-function mostraPergunta() {
+function mostraAlternativas() {
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+   function mostraAlternativas(){
+    for(const alternativas of perguntaAtual.alternativas)
+        const botaoAlternativas = document.createElement("button")
+   botaoAlternativas.textContent = alternativas;
+    caixaAlternativas.appendChild(botaoAlternativas);
+
+        
+    }
+
+    }
+
+    }
 }
 
 mostraPergunta();
